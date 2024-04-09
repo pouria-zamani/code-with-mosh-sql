@@ -10,5 +10,5 @@ SELECT
 		WHERE client_id = c.client_id) AS total_sales,
 	(SELECT AVG(invoice_total) 
 		FROM invoices) AS invoice_average,
-	(SELECT total_sales invoice_average) AS difference 
+	(SELECT total_sales - invoice_average) AS difference 
 FROM clients c
